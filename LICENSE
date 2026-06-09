@@ -1,21 +1,196 @@
+HYBRID LICENSE AND DISTRIBUTION NOTICE
+======================================
+
+This repository contains software components with different copyright statuses
+and license terms.
+
+The ELAS3D-XTAL code combines original research software, modifications, and
+extensions developed by the authors of this repository with software derived
+from finite-element elasticity code originally developed by the National
+Institute of Standards and Technology (NIST), as described in NISTIR 6269.
+
+The original NIST material is a work of the U.S. Federal Government and is not
+subject to copyright protection in the United States under 17 U.S.C. § 105.
+The new contributions and modifications developed by the authors of this
+repository are distributed under the MIT License.
+
+Please refer to the sections below for the terms governing each component.
+
+========================================================================
+PART 1: ELAS3D-XTAL NEW CONTRIBUTIONS AND MODIFICATIONS
+========================================================================
+
+The following terms apply to all original files, modifications, extensions,
+documentation, scripts, and algorithms developed by the authors of this
+repository, including but not limited to:
+
+1. ELAS3D-XTAL Fortran solver modifications and extensions.
+2. OpenMP acceleration and parallelization routines.
+3. Anisotropic polycrystalline elasticity implementation.
+4. Grain-wise crystallographic orientation handling using Rodrigues vectors.
+5. Cubic single-crystal stiffness rotation and Bond-matrix transformation
+   routines.
+6. HDF5 input/output implementations for phase labels, grain orientations,
+   full-field stress tensors, and von Mises stress fields.
+7. Preconditioned Conjugate Gradient, PCG, solver enhancements, including
+   block-Jacobi preconditioning and residual-safeguard logic.
+8. Active-node masking for pore/void-only regions.
+9. Full-field stress and von Mises stress post-processing routines.
+10. MATLAB-based microstructure generation, pore processing, mesh/export, and
+    fatigue-life prediction tools included in this repository.
+11. Documentation, examples, comments, input/output templates, and auxiliary
+    scripts created by the repository authors.
+
 MIT License
 
-Copyright (c) 2026 jjeongGrp
+Copyright (c) 2026 Juyoung Jeong and Veera Sundararaghavan
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
+of this software and associated documentation files, the "Software", to deal
 in the Software without restriction, including without limitation the rights
 to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 copies of the Software, and to permit persons to whom the Software is
 furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+The above copyright notice, this permission notice, and this hybrid license
+and distribution notice shall be included in all copies or substantial
+portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING
+FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+
+
+========================================================================
+PART 2: ORIGINAL NIST ELAS3D CORE SOLVER MATERIAL
+========================================================================
+
+Portions of the finite-element elasticity formulation and solver structure in
+this repository are based on or derived from software described in:
+
+   Garboczi, E. J. (1998).
+   "Finite Element and Finite Difference Programs for Computing the Linear
+   Electric and Elastic Properties of Digital Images of Random Materials."
+   NIST Interagency/Internal Report NISTIR 6269.
+   National Institute of Standards and Technology.
+
+Original source/status:
+
+   Public Domain in the United States, 17 U.S.C. § 105,
+   for works created by employees of the U.S. Federal Government.
+
+NIST DATA/WORKS LICENSE STATEMENT:
+
+This data/work was created by employees of the National Institute of Standards
+and Technology, NIST, an agency of the Federal Government. Pursuant to title
+17 United States Code Section 105, works of NIST employees are not subject to
+copyright protection in the United States. This data/work may be subject to
+foreign copyright.
+
+The data/work is provided by NIST as a public service and is expressly provided
+"AS IS." NIST MAKES NO WARRANTY OF ANY KIND, EXPRESS, IMPLIED OR STATUTORY,
+INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTY OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT AND DATA ACCURACY. NIST does not
+warrant or make any representations regarding the use of the data or the
+results thereof, including but not limited to the correctness, accuracy,
+reliability, or usefulness of the data. NIST SHALL NOT BE LIABLE AND YOU
+HEREBY RELEASE NIST FROM LIABILITY FOR ANY INDIRECT, CONSEQUENTIAL, SPECIAL,
+OR INCIDENTAL DAMAGES, INCLUDING DAMAGES FOR LOSS OF BUSINESS PROFITS,
+BUSINESS INTERRUPTION, LOSS OF BUSINESS INFORMATION, AND THE LIKE, WHETHER
+ARISING IN TORT, CONTRACT, OR OTHERWISE, ARISING FROM OR RELATING TO THE DATA,
+OR THE USE OF OR INABILITY TO USE THIS DATA, EVEN IF NIST HAS BEEN ADVISED OF
+THE POSSIBILITY OF SUCH DAMAGES.
+
+To the extent that NIST may hold copyright in countries other than the United
+States, you are hereby granted the non-exclusive, irrevocable, and
+unconditional right to print, publish, prepare derivative works, and distribute
+the NIST data, in any medium, or authorize others to do so on your behalf, on
+a royalty-free basis throughout the world.
+
+You may improve, modify, and create derivative works of the data or any
+portion of the data, and you may copy and distribute such modifications or
+works. Modified works should carry a notice stating that you changed the data
+and should note the date and nature of any such change. Please explicitly
+acknowledge the National Institute of Standards and Technology as the source
+of the data/work. Data citation recommendations are provided at:
+
+   https://www.nist.gov/open/license
+
+Permission to use this data is contingent upon your acceptance of the terms of
+this agreement and upon your providing appropriate acknowledgments of NIST's
+creation of the data/work.
+
+========================================================================
+PART 3: MODIFICATION AND ATTRIBUTION NOTICE
+========================================================================
+
+This repository contains modified and extended software based on the NIST
+ELAS3D finite-element elasticity code described in NISTIR 6269.
+
+Major modifications and extensions in ELAS3D-XTAL include, but are not limited
+to:
+
+1. Extension to anisotropic polycrystalline elasticity with grain-wise
+   crystallographic orientations.
+2. Rodrigues-vector orientation input and stiffness-tensor rotation for cubic
+   single crystals.
+3. HDF5-based input/output for large microstructure, orientation, stress, and
+   von Mises stress datasets.
+4. OpenMP parallelization of assembly, matrix-free operations, PCG iterations,
+   energy evaluation, and post-processing.
+5. Preconditioned Conjugate Gradient solver updates, including 3 x 3
+   block-Jacobi preconditioning.
+6. Active-node masking for pore/void-only nodes to improve numerical
+   conditioning in porous microstructures.
+7. Full-field stress and von Mises stress export for visualization and
+   downstream fatigue analysis.
+8. Integration with MATLAB-based synthetic microstructure generation,
+   XCT-derived pore processing, PRISMS-Plasticity export, and fatigue-life
+   prediction workflows.
+
+These modifications were developed by:
+
+   Juyoung Jeong and Veera Sundararaghavan
+   Department of Aerospace Engineering
+   University of Michigan
+   Ann Arbor, MI 48109, USA
+
+Repository:
+
+   https://github.com/jjeongGrp/multifidelity-fatigue
+
+========================================================================
+PART 4: CITATION AND ACKNOWLEDGMENT
+========================================================================
+
+If you use this repository, please cite the original NIST work where
+appropriate:
+
+   Garboczi, E. J. (1998).
+   "Finite Element and Finite Difference Programs for Computing the Linear
+   Electric and Elastic Properties of Digital Images of Random Materials."
+   NISTIR 6269.
+   National Institute of Standards and Technology.
+
+Please also cite or acknowledge this repository and the associated publication,
+if available.
+
+This work was supported by the Defense Advanced Research Projects Agency,
+DARPA, SURGE program under Cooperative Agreement No. HR0011-25-2-0009,
+"Predictive Real-time Intelligence for Metallic Endurance, PRIME."
+
+========================================================================
+PART 5: NO ENDORSEMENT
+========================================================================
+
+Identification of NIST, DARPA, the University of Michigan, or any associated
+programs, agencies, or institutions is for attribution, acknowledgment, and
+documentation purposes only.
+
+Such identification does not imply recommendation, endorsement, approval, or
+certification by NIST, DARPA, the University of Michigan, or the U.S.
+Government.
