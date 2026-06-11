@@ -1366,7 +1366,6 @@ fatiguelife_set92_grain
 The scripts generate CPFE-informed fatigue-life prediction curves for the microstructure-sensitivity study.
 
 ---
----
 
 ## 🧪 Experimental XCT Pore-Domain Preparation
 
