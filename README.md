@@ -1538,7 +1538,7 @@ For questions regarding the code, methodology, or the associated publication, pl
 
 * **Juyoung Jeong** - jjuyoung@umich.edu
 * **Veera Sundararaghavan** - veeras@umich.edu
-* **Affiliation:** Department of Aerospace Engineering, University of Michigan
+* **Affiliation:** Department of Aerospace Engineering, University of Michigan, Ann Arbor, MI 48109, USA
 
 **Bug Reports & Feature Requests:** If you encounter any issues while compiling or running the solver, please use the [GitHub Issues](https://github.com/jjeongGrp/multifidelity-fatigue/issues) page to report them.
 
