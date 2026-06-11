@@ -284,12 +284,7 @@ cd path\to\elas3d-xtal\src
 Compile using:
 
 ```cmd
-ifx /O3 /QxHost /Qunroll /Qopenmp /Qipo ^
-/I"C:\Program Files\HDF_Group\HDF5\2.0.0\mod\shared" ^
-elas3dxtal_pcg.f90 ^
-/Fe:elas3dxtal_pcg.exe ^
-/link /LIBPATH:"C:\Program Files\HDF_Group\HDF5\2.0.0\lib" ^
-hdf5_fortran.lib hdf5.lib
+ifx /O3 /QxHost /Qunroll /Qopenmp /Qipo /I"C:\Program Files\HDF_Group\HDF5\2.0.0\mod\shared" elas3dxtal_pcg.f90 /Fe:elas3dxtal_pcg.exe /link /LIBPATH:"C:\Program Files\HDF_Group\HDF5\2.0.0\lib" hdf5_fortran.lib hdf5.lib
 ```
 
 This creates:
@@ -1371,7 +1366,6 @@ fatiguelife_set92_grain
 The scripts generate CPFE-informed fatigue-life prediction curves for the microstructure-sensitivity study.
 
 ---
----
 
 ## 🧪 Experimental XCT Pore-Domain Preparation
 
@@ -1544,7 +1538,7 @@ For questions regarding the code, methodology, or the associated publication, pl
 
 * **Juyoung Jeong** - jjuyoung@umich.edu
 * **Veera Sundararaghavan** - veeras@umich.edu
-* **Affiliation:** Department of Aerospace Engineering, University of Michigan
+* **Affiliation:** Department of Aerospace Engineering, University of Michigan, Ann Arbor, MI 48109, USA
 
 **Bug Reports & Feature Requests:** If you encounter any issues while compiling or running the solver, please use the [GitHub Issues](https://github.com/jjeongGrp/multifidelity-fatigue/issues) page to report them.
 
