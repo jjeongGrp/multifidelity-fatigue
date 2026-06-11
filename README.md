@@ -284,12 +284,7 @@ cd path\to\elas3d-xtal\src
 Compile using:
 
 ```cmd
-ifx /O3 /QxHost /Qunroll /Qopenmp /Qipo ^
-/I"C:\Program Files\HDF_Group\HDF5\2.0.0\mod\shared" ^
-elas3dxtal_pcg.f90 ^
-/Fe:elas3dxtal_pcg.exe ^
-/link /LIBPATH:"C:\Program Files\HDF_Group\HDF5\2.0.0\lib" ^
-hdf5_fortran.lib hdf5.lib
+ifx /O3 /QxHost /Qunroll /Qopenmp /Qipo /I"C:\Program Files\HDF_Group\HDF5\2.0.0\mod\shared" elas3dxtal_pcg.f90 /Fe:elas3dxtal_pcg.exe /link /LIBPATH:"C:\Program Files\HDF_Group\HDF5\2.0.0\lib" hdf5_fortran.lib hdf5.lib
 ```
 
 This creates:
