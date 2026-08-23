@@ -6,7 +6,7 @@ This repository accompanies the study:
 
 > **An integrative multi-fidelity framework for fatigue life prediction in additively manufactured 316L stainless steel**
 
-The code provides an integrated computational workflow for XCT-informed microstructure generation, large-scale crystal-elasticity simulation, fatigue-hotspot identification, PRISMS-Plasticity crystal-plasticity subdomain preparation, and CPFE-informed fatigue-life prediction for laser powder bed fused, LPBF, 316L stainless steel.
+The code provides an integrated computational workflow for XCT-informed microstructure generation, large-scale crystal-elasticity simulation, fatigue-hotspot identification, PRISMS-Plasticity crystal-plasticity subdomain preparation, and CPFE-informed fatigue-life prediction for laser powder bed fused (LPBF) 316L stainless steel.
 
 The framework is designed for process-aware fatigue assessment across optimized EOS, lack-of-fusion, LOF, and keyholing, KH, process windows.
 
@@ -14,7 +14,7 @@ The framework is designed for process-aware fatigue assessment across optimized 
 
 ## Overview
 
-This work develops and validates a multi-fidelity framework for predicting defect-driven fatigue of LPBF 316L stainless steel. The workflow combines experimental characterization and simulation across multiple fidelity levels:
+This work develops and validates a multi-fidelity framework to predict defect-driven fatigue in LPBF 316L stainless steel. The workflow combines experimental characterization and simulation across multiple fidelity levels:
 
 - **Experimental characterization**
   - EBSD-based grain morphology and texture analysis
@@ -72,7 +72,7 @@ Coffin-Manson-Basquin fatigue-life prediction
 ```text
 elas3d-xtal/
 ├── src/                              # Reusable source files for microstructure generation, ELAS3D-Xtal simulation, postprocessing, PRISMS export, and fatigue prediction
-│   ├── MicroGen_elas3dxtal_input.m            # Generates XCT-informed polycrystalline microstructures and writes input_structure_poly.h5
+│   ├── MicroGen_elas3dxtal_input.m   # Generates XCT-informed polycrystalline microstructures and writes input_structure_poly.h5
 │   ├── elas3dxtal_pcg.f90            # OpenMP/HDF5 preconditioned conjugate-gradient crystal-elasticity solver
 │   ├── elas3dxtal_postprocessing.m   # Postprocesses full-field stress results and identifies pore-associated fatigue hotspots
 │   ├── prismsplasticity_input.m      # Exports selected hotspot subdomains to PRISMS-Plasticity input files
@@ -326,7 +326,7 @@ For application cases in:
 applications/sec4_2/
 ```
 
-each set folder may contain a case-specific copy of:
+Each set folder may contain a case-specific copy of:
 
 ```text
 elas3dxtal_pcg.f90
@@ -690,7 +690,7 @@ Set91/
 
 This section validates the synthetic microstructure generation procedure by importing XCT-derived pore distributions and generating voxelized synthetic polycrystalline microstructures with process-specific morphology and texture.
 
-Each folder contains case-specific MATLAB files for generating and plotting the synthetic microstructure. The primary script follows the naming pattern:
+Each folder contains case-specific MATLAB files to generate and plot the synthetic microstructure. The primary script follows the naming pattern:
 
 ```text
 microgen_elas3dxtal_setXX.m
@@ -783,7 +783,7 @@ elas3dxtal_postprocessing_setXX.m
 prismsplasticity_input_setXX.m
 ```
 
-where `XX` corresponds to the set number, for example `11`, `61`, or `91`.
+where `XX` corresponds to the set number, for example, `11`, `61`, or `91`.
 
 ### Workflow
 
@@ -1043,7 +1043,7 @@ fatigue_life_set61
 fatigue_life_set91
 ```
 
-The script reads the positive and negative equivalent strain CSV files, computes hotspot strain amplitudes, and generates the CPFE-informed fatigue-life prediction curve.
+The script reads the positive- and negative-equivalent strain CSV files, computes hotspot strain amplitudes, and generates the CPFE-informed fatigue-life prediction curve.
 
 ---
 
@@ -1243,7 +1243,7 @@ Example for ellipsoidal Set61:
 fatiguelife_ell_set61
 ```
 
-The script reads the positive and negative equivalent strain CSV files and generates the fatigue-life prediction curve for that pore-morphology case.
+The script reads the positive- and negative-equivalent strain CSV files and generates the fatigue-life prediction curve for that pore-morphology case.
 
 ---
 ## 4.5 Sensitivity Analysis: Microstructure
@@ -1254,7 +1254,7 @@ Location:
 applications/sec4_5/
 ```
 
-This section studies how microstructure and texture assumptions affect CPFE-predicted fatigue life.
+This section examines how assumptions about microstructure and texture affect CPFE-predicted fatigue life.
 
 The folder contains three subfolders:
 
