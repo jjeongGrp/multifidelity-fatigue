@@ -2327,7 +2327,7 @@
       ! Residual-spike safeguard parameters.
       ! If rel_res increases by RESET_RATIO and is still above RESET_ABS_TOL,
       ! the search direction is reset to the preconditioned gradient.
-      real(dp), parameter :: RESET_RATIO    = 10.0d0
+      real(dp), parameter :: RESET_RATIO    = 100.0d0
       real(dp), parameter :: RESET_ABS_TOL = 1.0d-4
 	  
       ! ======================================================================
