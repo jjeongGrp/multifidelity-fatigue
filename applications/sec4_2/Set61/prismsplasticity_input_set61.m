@@ -192,9 +192,9 @@ phase3d = phase;
 %
 % This selection rule avoids including voxels that extend beyond the requested
 % upper bound, assuming the requested range aligns with the voxel grid.
-x_range = [2.5080, 3.0030]; % mm
+x_range = [2.0185, 2.5135]; % mm
 y_range = [0.0000, 0.4950]; % mm
-z_range = [2.5080, 3.0030]; % mm
+z_range = [0.6380, 1.1330]; % mm
 
 %% ---------------------- GRID AND VOXEL COORDINATES ----------------------
 % phase3d is voxel-based and stored with array dimensions:
