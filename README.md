@@ -72,7 +72,7 @@ Coffin-Manson-Basquin fatigue-life prediction
 ```text
 elas3d-xtal/
 ├── src/                              # Reusable source files for microstructure generation, ELAS3D-Xtal simulation, postprocessing, PRISMS export, and fatigue prediction
-│   ├── elas3dxtal_input.m            # Generates XCT-informed polycrystalline microstructures and writes input_structure_poly.h5
+│   ├── MicroGen_elas3dxtal_input.m            # Generates XCT-informed polycrystalline microstructures and writes input_structure_poly.h5
 │   ├── elas3dxtal_pcg.f90            # OpenMP/HDF5 preconditioned conjugate-gradient crystal-elasticity solver
 │   ├── elas3dxtal_postprocessing.m   # Postprocesses full-field stress results and identifies pore-associated fatigue hotspots
 │   ├── prismsplasticity_input.m      # Exports selected hotspot subdomains to PRISMS-Plasticity input files
@@ -589,8 +589,8 @@ Equivalent strain data should be extracted at:
 For the loading/output schedule used in this repository, the corresponding time frames are typically:
 
 ```text
-time frame 20  → +0.003 strain
-time frame 60  → -0.003 strain
+time frame 30  → +0.003 strain
+time frame 90  → -0.003 strain
 ```
 
 Export CSV files using ParaView:
@@ -1395,7 +1395,7 @@ The `exp/` folder contains scripts for extracting user-defined pore subdomains f
 
 ### Purpose
 
-The scripts in `exp/` convert physical XCT pore data into cubic pore-domain MAT files that can be used by the ELAS3D-Xtal microstructure-generation workflow.
+The scripts in `exp/` convert physical XCT pore data into cubic pore-domain MAT files for use in the ELAS3D-Xtal microstructure-generation workflow.
 
 These extracted pore-domain files can be used as input data in:
 
@@ -1409,7 +1409,7 @@ for large-scale ELAS3D-Xtal elastic simulations.
 
 ### Typical Scripts
 
-Each process folder contains a process-specific MATLAB script for selecting and exporting a user-defined XCT pore subdomain.
+Each process folder contains a process-specific MATLAB script to select and export a user-defined XCT pore subdomain.
 
 Examples:
 
