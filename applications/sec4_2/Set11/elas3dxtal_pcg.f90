@@ -269,7 +269,7 @@
        !   Number of integration points per coordinate direction for the
        !   3x3x3 element quadrature rule.
        ! ======================================================================
-       integer, parameter :: n_grains = 67695
+       integer, parameter :: n_grains = 152778
        integer, parameter :: nphase = n_grains+1
        integer, parameter :: nphmax = nphase    
        integer, parameter :: nfaces = 27
