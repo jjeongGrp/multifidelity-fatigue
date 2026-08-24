@@ -4,7 +4,7 @@ A multi-fidelity, pore–microstructure-aware workflow for fatigue-life predicti
 
 This repository accompanies:
 
-> **An integrative multi-fidelity framework for fatigue-life prediction in additively manufactured 316L stainless steel**
+> **An integrative multi-fidelity framework for fatigue life prediction in additively manufactured 316L stainless steel**
 
 The workflow combines XCT-derived pore geometry, EBSD-informed synthetic microstructure generation, large-scale crystal-elasticity hotspot screening, local crystal-plasticity finite element modeling, and Coffin–Manson–Basquin (CMB) fatigue-life prediction.
 
