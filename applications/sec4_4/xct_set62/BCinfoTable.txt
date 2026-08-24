@@ -1,4 +1,0 @@
-2 1 0    0         0         0           # Face 1, u_x = 0 symmetry or rigid
-3 2 0    0         0         0           # Face 3, u_y = 0 symmetry or rigid
-5 3 0    0         0         0           # Face 5, u_z = 0 symmetry or rigid
-6 3 0    0.00152    -0.00152   0.00152      # Face 6, applied cyclic loading in z
