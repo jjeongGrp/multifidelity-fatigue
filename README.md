@@ -359,7 +359,7 @@ If you use this code in your research, please cite **both** the new methodology 
 
 **1. Multi-fidelity fatigue (This Work):**
 
-> Jeong, J., Bidar, A., Jame. M.S.R., Andani, M.T., Shao, S., Shamsaei, N., & Sundararaghavan, V. (2026). *An integrative multi-fidelity framework for fatigue life prediction in additively manufactured 316L stainless steel*. *International Journal of Plasticity* 207 (2026) 104858.
+> Jeong, J., Bidar, A., Jame. M.S.R., Andani, M.T., Shao, S., Shamsaei, N., & Sundararaghavan, V. (2026). *An integrative multi-fidelity framework for fatigue life prediction in additively manufactured 316L stainless steel*. *International Journal of Plasticity*, 207, 104858.
 
 **2. Original NIST Solver:**
 
@@ -367,7 +367,7 @@ If you use this code in your research, please cite **both** the new methodology 
 
 **3. ELAS3D-Xtal and MicroGen:**
 
-> Jeong, J. & Sundararaghavan, V. (2026). *ELAS3D-Xtal: An OpenMP-accelerated crystal elasticity solver with automated experiment-driven microstructure generation*. *Computational Materials Science* 269 (2026) 114734.
+> Jeong, J. & Sundararaghavan, V. (2026). *ELAS3D-Xtal: An OpenMP-accelerated crystal elasticity solver with automated experiment-driven microstructure generation*. *Computational Materials Science*, 269, 114734.
 > 
 ### BibTeX
 
