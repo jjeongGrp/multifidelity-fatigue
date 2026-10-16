@@ -359,15 +359,29 @@ If you use this code in your research, please cite **both** the new methodology 
 
 **1. Multi-fidelity fatigue (This Work):**
 
-> Jeong, J., Bidar, A., Jame. M.S.R., Andani, M.T., Shao, S., Shamsaei, N., & Sundararaghavan, V. (2026). *An integrative multi-fidelity framework for fatigue life prediction in additively manufactured 316L stainless steel*. *Under review* (2026)
+> Jeong, J., Bidar, A., Jame. M.S.R., Andani, M.T., Shao, S., Shamsaei, N., & Sundararaghavan, V. (2026). *An integrative multi-fidelity framework for fatigue life prediction in additively manufactured 316L stainless steel*. *International Journal of Plasticity* 207 (2026) 104858.
 
 **2. Original NIST Solver:**
 
 > Garboczi, E. (1998). *Finite Element and Finite Difference Programs for Computing the Linear Electric and Elastic Properties of Digital Images of Random Materials*. NIST Interagency/Internal Report (NISTIR) 6269.
 
+**3. ELAS3D-Xtal and MicroGen:**
+
+> Jeong, J. & Sundararaghavan, V. (2026). *ELAS3D-Xtal: An OpenMP-accelerated crystal elasticity solver with automated experiment-driven microstructure generation*. *Computational Materials Science* 269 (2026) 114734.
+> 
 ### BibTeX
 
 ```bibtex
+@article{jeong2026integrative,
+  title={An integrative multi-fidelity framework for fatigue life prediction in additively manufactured 316L stainless steel},
+  author={Juyoung Jeong and Alireza Bidar and Md Shafiqur Rahman Jame and Mohsen Taheri Andani and Shuai Shao and Nima Shamsaei and Veera Sundararaghavan},
+  journal={International Journal of Plasticity},
+  volume={207},
+  pages={104858},
+  year={2026},
+  doi={https://doi.org/10.1016/j.ijplas.2026.104858},
+  publisher={Elsevier}
+}
 @article{garboczi1998finite,
   title={Finite element and finite difference programs for computing the linear electric and elastic properties of digital images of random materials},
   author={Garboczi, Edward J},
@@ -375,7 +389,16 @@ If you use this code in your research, please cite **both** the new methodology 
   journal={Report NISTIR},
   publisher={Edward J. Garboczi}
 }
-
+@article{jeong2026elas3d,
+  title={ELAS3D-Xtal: An OpenMP-accelerated crystal elasticity solver with automated experiment-driven microstructure generation},
+  author={Jeong, Juyoung and Sundararaghavan, Veera},
+  journal={Computational Materials Science},
+  volume={269},
+  pages={114734},
+  year={2026},
+  doi={https://doi.org/10.1016/j.commatsci.2026.114734}
+  publisher={Elsevier}
+}
 ```
 
 ---
